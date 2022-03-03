@@ -1,7 +1,7 @@
 const {Sequelize} = require('sequelize')
 
 const modelDefiners = [
-    require('./models/user.model')
+    require('./models/user.model.js')
 ]
 
 const sequelize = new Sequelize("olymp", "root", "root", {
@@ -15,5 +15,5 @@ const sequelize = new Sequelize("olymp", "root", "root", {
 for (const modelDefiner of modelDefiners) {
     modelDefiner(sequelize);
 }
-module.exports = sequelize;
+module.exports = sequelize
 
